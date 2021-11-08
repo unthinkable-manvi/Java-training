@@ -51,6 +51,31 @@ class Pulsar extends Bike{
     }
 }
 
+
+//Inheritance
+// In a Car Store one customer needs reacecar and other one need luxury Car
+// For this we can create one class which have all the  coommon method
+class Car{
+    public void model(){
+        System.out.println("hello I'm a method model");
+    }
+    public void insurance(){
+        System.out.println("hello I'm a method insurane");
+    }
+}
+
+class luxuryCar extends Car{
+        public void design(){
+            System.out.println("hello I'm a method design");
+        }
+}
+class racecar extends Car{
+    public void speed(){
+        System.out.println("hello I'm a method speed");
+    }   
+}
+
+
 public class Oops {
        public static void main(String[] args) {
            Students s1=new Students(21,"manvi");
@@ -65,6 +90,15 @@ public class Oops {
            obj.run();
           Bike obj1=new Pulsar();
           obj1.run();
+        //Inheritance
+          luxuryCar lc=new luxuryCar();
+           lc.design();
+           lc.model();
+
+           racecar rc=new racecar();
+           rc.speed();
+           rc.insurance();
+
 
        }
 }
