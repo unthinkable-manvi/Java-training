@@ -76,6 +76,26 @@ class racecar extends Car{
 }
 
 
+// Abstract Classes
+// is used to hide logical implementation of program and show only important information.
+abstract class Viechle{
+    int noOfTyres;
+   abstract void start();
+}
+class Carr extends Viechle{
+        public void start(){
+             System.out.println("start with key");
+        }
+}
+class Scooter extends Viechle{
+    public void start(){
+            System.out.println("start with kick");
+    }
+
+}
+
+
+
 public class Oops {
        public static void main(String[] args) {
            Students s1=new Students(21,"manvi");
@@ -99,6 +119,8 @@ public class Oops {
            rc.speed();
            rc.insurance();
 
+           Scooter v=new Scooter();
+           v.start();
 
        }
 }
