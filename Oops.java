@@ -94,8 +94,23 @@ class Scooter extends Viechle{
 
 }
 
+// Encapsulation 
+// wrapping the data and code as a single unit
+// Steps to Achieve
+/* 1. Declare the variable of class as private
+   2. provide public setter and getter method to modify and view the variable value
+*/
 
+class Employee{
+    private int emp_id;// Data hiding
 
+    public void setEmpid(int eid){
+        emp_id=eid;
+    }
+    public int getEmpid(){
+        return emp_id;
+    }
+}
 public class Oops {
        public static void main(String[] args) {
            Students s1=new Students(21,"manvi");
@@ -114,13 +129,19 @@ public class Oops {
           luxuryCar lc=new luxuryCar();
            lc.design();
            lc.model();
-
            racecar rc=new racecar();
            rc.speed();
            rc.insurance();
 
+           //Abstraction
            Scooter v=new Scooter();
            v.start();
+
+           // Encapsulation
+           Employee e=new Employee();
+           e.setEmpid(101);
+           System.out.println(e.getEmpid());
+
 
        }
 }
