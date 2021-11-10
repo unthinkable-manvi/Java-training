@@ -12,6 +12,8 @@ public class ExceptionSample {
              System.out.println("can't div by zero");
 
          }
+         // Finally block is always executed either error is found or not
+         
          try{
             String s=null;
             int t=s.length();
@@ -19,6 +21,8 @@ public class ExceptionSample {
          }
          catch(NullPointerException e){
              System.out.println("can't determine the length of  null String ");
+         }finally{
+             System.out.println("put important code here!");
          }
      } 
 }
